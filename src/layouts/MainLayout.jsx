@@ -1,15 +1,14 @@
-import { Outlet } from "react-router-dom";
+import { Outlet, useNavigation } from "react-router-dom";
 import Navbar from "../components/Navbar/Navbar";
-import Container from "../components/ui/Container";
 import Footer from "../components/Footer/Footer";
+import Spinner from "../components/Spinner/Spinner";
 
 const MainLayout = () => {
+  const navigation = useNavigation();
   return (
     <div>
-      <Container>
-        <Navbar />
-        <Outlet />
-      </Container>
+      <Navbar />
+      {navigation.state === "loading" ? <Spinner /> : <Outlet />}
       <Footer />
     </div>
   );

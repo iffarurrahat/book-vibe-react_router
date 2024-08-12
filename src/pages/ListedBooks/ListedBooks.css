@@ -1,0 +1,9 @@
+.react-tabs__tab {
+  color: #13131380;
+}
+
+.react-tabs__tab:focus,
+.react-tabs__tab--selected {
+  color: #131313cc;
+  font-weight: 600;
+}

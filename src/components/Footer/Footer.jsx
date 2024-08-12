@@ -1,111 +1,105 @@
+import { Link } from "react-router-dom";
 import Container from "../../components/ui/Container";
-import "./Footer.css";
-import {
-  FaXTwitter,
-  FaFacebookF,
-  FaInstagram,
-  FaLocationDot,
-  FaPhone,
-} from "react-icons/fa6";
-import { SiMinutemailer } from "react-icons/si";
-// import footerImg1 from "./../../assets/spicy-thai.png";
-// import footerImg2 from "./../../assets/lemony-salmon.png";
+import { FaXTwitter, FaFacebookF, FaInstagram } from "react-icons/fa6";
+import { IoIosArrowRoundForward } from "react-icons/io";
 
 const Footer = () => {
   return (
-    <div className="mt-10 py-20 md:py-32 footer">
-      <Container>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 md:gap-6 text-white">
-          <div>
-            <h2 className="text-xl md:text-2xl font-light">Recipe Calories</h2>
-            <p className="h-1 w-10 bg-green-400 mt-1"></p>
-            <p className="my-3 leading-6">
-              Recipes often lack calorie info. Estimate based on ingredients or
-              use online calculators for a healthier choice.
+    <div className="nunito">
+      <div className="mt-10 py-20 md:py-32 bg-[#272727]">
+        <Container>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 md:gap-6 text-white px-5 sm:px-8 md:px-0">
+            <div>
+              <h2 className="text-sm font-semibold mb-5">Book Vibe</h2>
+              <p className="leading-6 text-[#ffffff4d]">
+                Books open doors to new worlds, offering endless adventures,
+                wisdom, and the joy of discovery.
+              </p>
+              <Link to="/" className="flex items-center  mt-3 text-[#23BE0A]">
+                read more <IoIosArrowRoundForward className="w-10 h-6" />
+              </Link>
+            </div>
+            <div className="lg:pl-16">
+              <h2 className="text-sm font-semibold mb-5">CATEGORIES</h2>
+              <div className="space-y-2 text-[#ffffffb3]">
+                <p>Listed Books</p>
+                <p>Pages to Read</p>
+                <p>Blog</p>
+                <p>Others</p>
+                <p>Help & Support</p>
+              </div>
+            </div>
+            <div>
+              <h2 className="text-sm font-semibold mb-5">TAG CLOUD</h2>
+              <div className="flex flex-wrap gap-5">
+                <span className="text-xs border border-[#3D3D3D] py-1 px-2 rounded">
+                  Book
+                </span>
+                <span className="text-xs border border-[#3D3D3D] py-1 px-2 rounded">
+                  Review
+                </span>
+                <span className="text-xs border border-[#3D3D3D] py-1 px-2 rounded">
+                  Knowlaged
+                </span>
+                <span className="text-xs border border-[#3D3D3D] py-1 px-2 rounded">
+                  Education
+                </span>
+                <span className="text-xs border border-[#3D3D3D] py-1 px-2 rounded">
+                  Tech
+                </span>
+                <span className="text-xs border border-[#3D3D3D] py-1 px-2 rounded">
+                  Writer
+                </span>
+                <span className="text-xs border border-[#3D3D3D] py-1 px-2 rounded">
+                  Fictions
+                </span>
+                <span className="text-xs border border-[#3D3D3D] py-1 px-2 rounded">
+                  Others
+                </span>
+              </div>
+            </div>
+            <div>
+              <h2 className="text-sm font-semibold mb-5">SUBSCRIBE</h2>
+              <div className="flex mb-5">
+                <input
+                  type="text"
+                  className="px-3 py-2 rounded-l-md bg-[#323232] outline-none"
+                  placeholder="Enter email address"
+                />
+                <button className="bg-[#23BE0A] rounded-r-md px-3">##</button>
+              </div>
+              <div className="mt-10">
+                <h2 className="text-sm font-semibold mb-5">FOLLOW US</h2>
+                <div className="flex gap-5">
+                  <p className="border p-2 rounded">
+                    <FaXTwitter className="text-white" />
+                  </p>
+                  <p className="border p-2 rounded">
+                    <FaFacebookF className="text-white" />
+                  </p>
+                  <p className="border p-2 rounded">
+                    <FaInstagram className="text-white" />
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </Container>
+      </div>
+      <div className="bg-[#1A1A1A] py-5">
+        <Container>
+          <div className="sm:flex items-center justify-between">
+            <p className="text-[#ffffffb3] text-center sm:text-start">
+              Copyright ©2024 All rights reserved
             </p>
-            <div className="flex gap-5 mt-4">
-              <p className="bg-green-400 p-3 rounded-full">
-                <FaXTwitter className="text-white text-xl" />
-              </p>
-              <p className="bg-green-400 p-3 rounded-full">
-                <FaFacebookF className="text-white text-xl" />
-              </p>
-              <p className="bg-green-400 p-3 rounded-full">
-                <FaInstagram className="text-white text-xl" />
-              </p>
-            </div>
+            <ul className="flex gap-4 text-[#ffffffb3] justify-center sm:justify-end mt-3 sm:mt-0">
+              <li>Terms</li>
+              <li>Privacy</li>
+              <li>Compliances</li>
+            </ul>
           </div>
-          <div>
-            <h2 className="text-xl md:text-2xl font-light">Latest Recipe</h2>
-            <p className="h-1 w-10 bg-green-400 mt-1"></p>
-            <div className="flex gap-5 mt-4">
-              {/* <img
-                src={footerImg1}
-                alt="Spicy Thai Stir-Fry"
-                className="h-20 w-24 bg-green-400 rounded mt-2"
-              /> */}
-              <div>
-                <h4 className="text-lg font-medium mb-2">
-                  Spicy Thai Stir-Fry
-                </h4>
-                <p> This light dish packs a punch with protein and heat </p>
-              </div>
-            </div>
-            <div className="flex gap-5 mt-4">
-              {/* <img
-                src={footerImg2}
-                alt="Spicy Thai Stir-Fry"
-                className="h-20 w-24 bg-green-400 rounded mt-2"
-              /> */}
-              <div>
-                <h4 className="text-lg font-medium mb-2">
-                  Spicy Thai Stir-Fry
-                </h4>
-                <p> This light dish packs a punch with protein and heat </p>
-              </div>
-            </div>
-          </div>
-          <div className="lg:pl-16">
-            <h2 className="text-xl md:text-2xl font-light">Quick Links</h2>
-            <p className="h-1 w-10 bg-green-400 mt-1"></p>
-            <div className="mt-4 leading-10 list-none">
-              <li>
-                <a href="index.html">Home</a>
-              </li>
-              <li>
-                <a href="#">Recipes</a>
-              </li>
-              <li>
-                <a href="#">About</a>
-              </li>
-              <li>
-                <a href="#">Search</a>
-              </li>
-            </div>
-          </div>
-          <div>
-            <h2 className="text-xl md:text-2xl font-light">
-              Have a Questions?
-            </h2>
-            <p className="h-1 w-10 bg-green-400 mt-1"></p>
-            <div className="mt-4">
-              <p className="flex gap-3 leading-6">
-                <FaLocationDot className="mt-2" />
-                1720 Fake St. Tierra del Fuego, <br />
-                Uluru, Northern Territory, Australia
-              </p>
-              <p className="flex items-center gap-3 py-4">
-                <FaPhone />
-                +2 333 4456 231
-              </p>
-              <p className="flex items-center gap-3 py-4">
-                <SiMinutemailer />
-                info@yourdomain.com
-              </p>
-            </div>
-          </div>
-        </div>
-      </Container>
+        </Container>
+      </div>
     </div>
   );
 };

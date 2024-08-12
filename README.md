@@ -5,6 +5,8 @@
 Using Package /Tools:
 
 - React
+- React-Router
+- React-Tabs
 - React Icons
 - React Hot Toast
 - React PropTypes
